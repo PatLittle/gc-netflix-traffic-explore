@@ -2,17 +2,23 @@
   "nir": null,
   "asn_registry": "arin",
   "asn": "14618",
-  "asn_cidr": "3.224.0.0/12",
+  "asn_cidr": "52.2.0.0/15",
   "asn_country_code": "US",
-  "asn_date": "2018-06-25",
+  "asn_date": "1991-12-19",
   "asn_description": "AMAZON-AES, US",
-  "query": "3.225.92.8",
+  "query": "52.3.144.142",
   "network": {
-    "handle": "NET-3-224-0-0-1",
+    "handle": "NET-52-0-0-0-1",
     "status": [
       "active"
     ],
-    "remarks": null,
+    "remarks": [
+      {
+        "title": "Registration Comments",
+        "description": "Geofeed http://ip-ranges.amazonaws.com/geo-ip-feed.csv",
+        "links": null
+      }
+    ],
     "notices": [
       {
         "title": "Terms of Service",
@@ -35,54 +41,59 @@
       }
     ],
     "links": [
-      "https://rdap.arin.net/registry/ip/3.224.0.0",
-      "https://whois.arin.net/rest/net/NET-3-224-0-0-1",
-      "https://rdap.arin.net/registry/ip/3.128.0.0/9"
+      "https://rdap.arin.net/registry/ip/52.0.0.0",
+      "https://whois.arin.net/rest/net/NET-52-0-0-0-1"
     ],
     "events": [
       {
         "action": "last changed",
-        "timestamp": "2018-12-18T16:56:54-05:00",
+        "timestamp": "2024-02-05T16:55:14-05:00",
         "actor": null
       },
       {
         "action": "registration",
-        "timestamp": "2018-12-18T16:56:54-05:00",
+        "timestamp": "1991-12-19T00:00:00-05:00",
         "actor": null
       }
     ],
     "raw": null,
-    "start_address": "3.224.0.0",
-    "end_address": "3.239.255.255",
-    "cidr": "3.224.0.0/12",
+    "start_address": "52.0.0.0",
+    "end_address": "52.79.255.255",
+    "cidr": "52.0.0.0/10, 52.64.0.0/12",
     "ip_version": "v4",
-    "type": "ALLOCATION",
-    "name": "AMAZON-IAD",
+    "type": "DIRECT ALLOCATION",
+    "name": "AT-88-Z",
     "country": null,
-    "parent_handle": "NET-3-128-0-0-1"
+    "parent_handle": "NET-52-0-0-0-0"
   },
   "entities": [
-    "ADSN-1"
+    "AT-88-Z"
   ],
   "objects": {
-    "ADSN-1": {
-      "handle": "ADSN-1",
+    "AT-88-Z": {
+      "handle": "AT-88-Z",
       "status": null,
-      "remarks": null,
+      "remarks": [
+        {
+          "title": "Registration Comments",
+          "description": "All abuse reports MUST include:\r\n* src IP\r\n* dest IP (your IP)\r\n* dest port\r\n* Accurate date/timestamp and timezone of activity\r\n* Intensity/frequency (short log extracts)\r\n* Your contact details (phone and email) Without these we will be unable to identify the correct owner of the IP address at that point in time.",
+          "links": null
+        }
+      ],
       "notices": null,
       "links": [
-        "https://rdap.arin.net/registry/entity/ADSN-1",
-        "https://whois.arin.net/rest/org/ADSN-1"
+        "https://rdap.arin.net/registry/entity/AT-88-Z",
+        "https://whois.arin.net/rest/org/AT-88-Z"
       ],
       "events": [
         {
           "action": "last changed",
-          "timestamp": "2019-08-02T11:50:10-04:00",
+          "timestamp": "2024-01-24T12:08:17-05:00",
           "actor": null
         },
         {
           "action": "registration",
-          "timestamp": "2018-04-25T12:29:08-04:00",
+          "timestamp": "2011-12-08T13:34:25-05:00",
           "actor": null
         }
       ],
@@ -91,12 +102,12 @@
         "registrant"
       ],
       "contact": {
-        "name": "Amazon Data Services NoVa",
+        "name": "Amazon Technologies Inc.",
         "kind": "org",
         "address": [
           {
             "type": null,
-            "value": "13200 Woodland Park Road\nHerndon\nVA\n20171\nUnited States"
+            "value": "410 Terry Ave N.\nSeattle\nWA\n98109\nUnited States"
           }
         ],
         "phone": null,
@@ -106,6 +117,8 @@
       },
       "events_actor": null,
       "entities": [
+        "ARMP-ARIN",
+        "IPROU3-ARIN",
         "AEA8-ARIN",
         "ANO24-ARIN",
         "AANO1-ARIN",

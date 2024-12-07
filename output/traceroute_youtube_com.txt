@@ -1,4 +1,4 @@
-traceroute to youtube.com (172.217.4.46), 30 hops max, 60 byte packets
+traceroute to youtube.com (142.250.190.46), 30 hops max, 60 byte packets
  1  * * *
  2  * * *
  3  * * *

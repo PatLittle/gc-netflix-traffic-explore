@@ -2,13 +2,13 @@
   "nir": null,
   "asn_registry": "arin",
   "asn": "15169",
-  "asn_cidr": "172.217.4.0/24",
+  "asn_cidr": "142.250.190.0/24",
   "asn_country_code": "US",
-  "asn_date": "2012-04-16",
+  "asn_date": "2012-05-24",
   "asn_description": "GOOGLE, US",
-  "query": "172.217.4.46",
+  "query": "142.250.190.46",
   "network": {
-    "handle": "NET-172-217-0-0-1",
+    "handle": "NET-142-250-0-0-1",
     "status": [
       "active"
     ],
@@ -35,30 +35,30 @@
       }
     ],
     "links": [
-      "https://rdap.arin.net/registry/ip/172.217.0.0",
-      "https://whois.arin.net/rest/net/NET-172-217-0-0-1"
+      "https://rdap.arin.net/registry/ip/142.250.0.0",
+      "https://whois.arin.net/rest/net/NET-142-250-0-0-1"
     ],
     "events": [
       {
         "action": "last changed",
-        "timestamp": "2012-04-16T11:24:30-04:00",
+        "timestamp": "2012-05-24T11:40:55-04:00",
         "actor": null
       },
       {
         "action": "registration",
-        "timestamp": "2012-04-16T11:24:30-04:00",
+        "timestamp": "2012-05-24T11:40:55-04:00",
         "actor": null
       }
     ],
     "raw": null,
-    "start_address": "172.217.0.0",
-    "end_address": "172.217.255.255",
-    "cidr": "172.217.0.0/16",
+    "start_address": "142.250.0.0",
+    "end_address": "142.251.255.255",
+    "cidr": "142.250.0.0/15",
     "ip_version": "v4",
     "type": "DIRECT ALLOCATION",
     "name": "GOOGLE",
     "country": null,
-    "parent_handle": "NET-172-0-0-0-0"
+    "parent_handle": "NET-142-0-0-0-0"
   },
   "entities": [
     "GOGL"

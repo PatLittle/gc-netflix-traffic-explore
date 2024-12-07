@@ -1,4 +1,4 @@
-traceroute to assets.nflxext.com (45.57.91.1), 30 hops max, 60 byte packets
+traceroute to assets.nflxext.com (45.57.90.1), 30 hops max, 60 byte packets
  1  * * *
  2  * * *
  3  * * *
