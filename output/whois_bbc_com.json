@@ -2,11 +2,11 @@
   "nir": null,
   "asn_registry": "arin",
   "asn": "54113",
-  "asn_cidr": "151.101.0.0/22",
+  "asn_cidr": "151.101.192.0/22",
   "asn_country_code": "US",
   "asn_date": "2016-02-01",
   "asn_description": "FASTLY, US",
-  "query": "151.101.0.81",
+  "query": "151.101.192.81",
   "network": {
     "handle": "NET-151-101-0-0-1",
     "status": [

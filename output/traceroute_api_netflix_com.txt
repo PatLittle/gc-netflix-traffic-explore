@@ -1,4 +1,4 @@
-traceroute to api.netflix.com (3.140.168.183), 30 hops max, 60 byte packets
+traceroute to api.netflix.com (3.128.105.153), 30 hops max, 60 byte packets
  1  * * *
  2  * * *
  3  * * *

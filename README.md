@@ -1,23 +1,15 @@
-# Government Traffic Benchmark Analysis
+## Traffic Analysis Results
 
-This repository automates the analysis of network traffic paths between the Government of Canada networks and popular platforms like Netflix, YouTube, BBC, and CNN. It runs a traceroute, WHOIS lookup, and BGP path analysis using public tools and data sources.
+### Choropleth Map (Global WHOIS Distribution)
+![WHOIS Choropleth Map](output/whois_choropleth_map.png)
 
-## Features
-- **Traceroute Analysis**: Logs network hops and latency.
-- **WHOIS Lookup**: Determines ownership of IP addresses.
-- **Synthetic Probing**: Estimates traffic volume by downloading small files.
-- **Visualization**: Generates bar charts and choropleth maps.
+### Canada-specific Request Map
+![Canada Request Map](output/canada_request_map.png)
 
-## Setup
-1. Clone the repository:
-    ```bash
-    git clone <repo-link>
-    ```
-2. Run the script locally:
-    ```bash
-    python benchmark_traffic_analysis.py
-    ```
-3. Outputs are saved in the `output/` folder.
+### Traffic Size to Platforms
+![Netflix Traffic Size](output/netflix_size.png)
+![YouTube Traffic Size](output/youtube_size.png)
 
-## GitHub Actions
-The script runs daily and commits updated outputs back to the repository automatically.
+### Response Times to Platforms
+![Netflix Response Time](output/netflix_duration.png)
+![YouTube Response Time](output/youtube_duration.png)

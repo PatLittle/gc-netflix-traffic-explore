@@ -2,11 +2,11 @@
   "nir": null,
   "asn_registry": "arin",
   "asn": "15169",
-  "asn_cidr": "142.250.189.0/24",
+  "asn_cidr": "142.250.190.0/24",
   "asn_country_code": "US",
   "asn_date": "2012-05-24",
   "asn_description": "GOOGLE, US",
-  "query": "142.250.189.228",
+  "query": "142.250.190.4",
   "network": {
     "handle": "NET-142-250-0-0-1",
     "status": [

@@ -1,4 +1,4 @@
-traceroute to cdn.cnn.com (104.68.106.228), 30 hops max, 60 byte packets
+traceroute to cdn.cnn.com (23.61.108.204), 30 hops max, 60 byte packets
  1  * * *
  2  * * *
  3  * * *

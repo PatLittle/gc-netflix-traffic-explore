@@ -1,4 +1,4 @@
-traceroute to netflix.com (44.242.60.85), 30 hops max, 60 byte packets
+traceroute to netflix.com (3.211.157.115), 30 hops max, 60 byte packets
  1  * * *
  2  * * *
  3  * * *

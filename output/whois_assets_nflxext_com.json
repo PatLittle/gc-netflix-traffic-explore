@@ -2,11 +2,11 @@
   "nir": null,
   "asn_registry": "arin",
   "asn": "40027",
-  "asn_cidr": "45.57.90.0/24",
+  "asn_cidr": "45.57.91.0/24",
   "asn_country_code": "US",
   "asn_date": "2015-01-09",
   "asn_description": "NETFLIX-ASN, US",
-  "query": "45.57.90.1",
+  "query": "45.57.91.1",
   "network": {
     "handle": "NET-45-57-0-0-1",
     "status": [
