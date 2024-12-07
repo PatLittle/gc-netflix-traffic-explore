@@ -1,0 +1,120 @@
+{
+  "nir": null,
+  "asn_registry": "arin",
+  "asn": "40027",
+  "asn_cidr": "45.57.90.0/24",
+  "asn_country_code": "US",
+  "asn_date": "2015-01-09",
+  "asn_description": "NETFLIX-ASN, US",
+  "query": "45.57.90.1",
+  "network": {
+    "handle": "NET-45-57-0-0-1",
+    "status": [
+      "active"
+    ],
+    "remarks": [
+      {
+        "title": "Registration Comments",
+        "description": "Geofeed https://raw.githubusercontent.com/Netflix/nflx-geofeed/main/geofeed.csv",
+        "links": null
+      }
+    ],
+    "notices": [
+      {
+        "title": "Terms of Service",
+        "description": "By using the ARIN RDAP/Whois service, you are agreeing to the RDAP/Whois Terms of Use",
+        "links": [
+          "https://www.arin.net/resources/registry/whois/tou/"
+        ]
+      },
+      {
+        "title": "Whois Inaccuracy Reporting",
+        "description": "If you see inaccuracies in the results, please visit: ",
+        "links": [
+          "https://www.arin.net/resources/registry/whois/inaccuracy_reporting/"
+        ]
+      },
+      {
+        "title": "Copyright Notice",
+        "description": "Copyright 1997-2024, American Registry for Internet Numbers, Ltd.",
+        "links": null
+      }
+    ],
+    "links": [
+      "https://rdap.arin.net/registry/ip/45.57.0.0",
+      "https://whois.arin.net/rest/net/NET-45-57-0-0-1"
+    ],
+    "events": [
+      {
+        "action": "last changed",
+        "timestamp": "2023-08-21T21:21:42-04:00",
+        "actor": null
+      },
+      {
+        "action": "registration",
+        "timestamp": "2015-01-09T18:36:31-05:00",
+        "actor": null
+      }
+    ],
+    "raw": null,
+    "start_address": "45.57.0.0",
+    "end_address": "45.57.127.255",
+    "cidr": "45.57.0.0/17",
+    "ip_version": "v4",
+    "type": "DIRECT ALLOCATION",
+    "name": "SS-CDN-4",
+    "country": null,
+    "parent_handle": "NET-45-0-0-0-0"
+  },
+  "entities": [
+    "SS-144"
+  ],
+  "objects": {
+    "SS-144": {
+      "handle": "SS-144",
+      "status": null,
+      "remarks": null,
+      "notices": null,
+      "links": [
+        "https://rdap.arin.net/registry/entity/SS-144",
+        "https://whois.arin.net/rest/org/SS-144"
+      ],
+      "events": [
+        {
+          "action": "last changed",
+          "timestamp": "2021-07-21T12:12:54-04:00",
+          "actor": null
+        },
+        {
+          "action": "registration",
+          "timestamp": "2012-04-20T11:48:53-04:00",
+          "actor": null
+        }
+      ],
+      "raw": null,
+      "roles": [
+        "registrant"
+      ],
+      "contact": {
+        "name": "Netflix Streaming Services Inc.",
+        "kind": "org",
+        "address": [
+          {
+            "type": null,
+            "value": "1209 Orange Street\nWilmington\nDE\n19801\nUnited States"
+          }
+        ],
+        "phone": null,
+        "email": null,
+        "role": null,
+        "title": null
+      },
+      "events_actor": null,
+      "entities": [
+        "SNO92-ARIN",
+        "CDNET-ARIN"
+      ]
+    }
+  },
+  "raw": null
+}
