@@ -1,6 +1,0 @@
-{
-    "Netflix": ["netflix.com", "assets.nflxext.com", "api.netflix.com"],
-    "YouTube": ["youtube.com", "googlevideo.com"],
-    "BBC": ["bbc.com", "static.bbci.co.uk"],
-    "CNN": ["cnn.com", "cdn.cnn.com"]
-}
