@@ -1,10 +1,13 @@
 name: Run Traffic Analysis
 
 on:
-  workflow_dispatch:  # Allows manual triggering of the workflow
+  workflow_dispatch:  # Manual trigger
   push:
     paths:
-      - '.github/workflows/run_analysis.yml'  # Trigger only when this file is updated
+      - '.github/workflows/run_analysis.yml'
+
+permissions:
+  contents: write  # Allows committing changes back to the repository
 
 jobs:
   run-analysis:
@@ -22,19 +25,40 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y traceroute dnsutils  # Install traceroute and dig for DNS
+        sudo apt-get install -y traceroute dnsutils
 
     - name: Install Python dependencies
       run: |
-        pip install requests ipwhois matplotlib geopandas pandas
+        pip install requests ipwhois matplotlib geopandas pandas plotly
 
     - name: Run Traffic Analysis Script
       run: python benchmark_traffic_analysis.py
 
+    - name: Update README with Visualizations
+      run: |
+        echo "## Traffic Analysis Results" > README.md
+        echo "" >> README.md
+        echo "### Choropleth Map (Global WHOIS Distribution)" >> README.md
+        echo "![WHOIS Choropleth Map](output/whois_choropleth_map.png)" >> README.md
+        echo "" >> README.md
+        echo "### Canada-specific Request Map" >> README.md
+        echo "![Canada Request Map](output/canada_request_map.png)" >> README.md
+        echo "" >> README.md
+        echo "### Traffic Size to Platforms" >> README.md
+        echo "![Netflix Traffic Size](output/netflix_size.png)" >> README.md
+        echo "![YouTube Traffic Size](output/youtube_size.png)" >> README.md
+        echo "" >> README.md
+        echo "### Response Times to Platforms" >> README.md
+        echo "![Netflix Response Time](output/netflix_duration.png)" >> README.md
+        echo "![YouTube Response Time](output/youtube_duration.png)" >> README.md
+
     - name: Commit and Push Results
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config user.name "GitHub Actions Bot"
         git config user.email "actions@github.com"
         git add output/
-        git commit -m "Add traffic analysis results" || echo "No changes to commit"
+        git add README.md
+        git commit -m "Update visualizations and README with traffic analysis results" || echo "No changes to commit"
         git push
