@@ -1,11 +1,10 @@
 name: Run Traffic Analysis
 
 on:
-  schedule:
-    - cron: "0 0 * * *"  # Run daily at midnight UTC
+  workflow_dispatch:  # Allows manual triggering of the workflow
   push:
-    branches:
-      - main
+    paths:
+      - '.github/workflows/run_analysis.yml'  # Trigger only when this file is updated
 
 jobs:
   run-analysis:
@@ -20,9 +19,14 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install dependencies
+    - name: Install system dependencies
       run: |
-        pip install requests ipwhois pandas geopandas matplotlib
+        sudo apt-get update
+        sudo apt-get install -y traceroute dnsutils  # Install traceroute and dig for DNS
+
+    - name: Install Python dependencies
+      run: |
+        pip install requests ipwhois matplotlib geopandas pandas
 
     - name: Run Traffic Analysis Script
       run: python benchmark_traffic_analysis.py
