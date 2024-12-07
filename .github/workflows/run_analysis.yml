@@ -7,7 +7,7 @@ on:
       - '.github/workflows/run_analysis.yml'
 
 permissions:
-  contents: write  # Allows committing changes back to the repository
+  contents: write
 
 jobs:
   run-analysis:
@@ -22,6 +22,14 @@ jobs:
       with:
         python-version: '3.x'
 
+    - name: Cache Python dependencies
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
     - name: Install system dependencies
       run: |
         sudo apt-get update
@@ -31,26 +39,26 @@ jobs:
       run: |
         pip install requests ipwhois matplotlib geopandas pandas plotly
 
+    - name: Cache Generated Outputs
+      id: cache-results
+      uses: actions/cache@v4
+      with:
+        path: output/
+        key: ${{ runner.os }}-output-${{ github.run_id }}
+        restore-keys: |
+          ${{ runner.os }}-output-
+
     - name: Run Traffic Analysis Script
+      if: steps.cache-results.outputs.cache-hit != 'true'
       run: python benchmark_traffic_analysis.py
 
-    - name: Update README with Visualizations
+    - name: Generate Visualization README
       run: |
-        echo "## Traffic Analysis Results" > README.md
-        echo "" >> README.md
-        echo "### Choropleth Map (Global WHOIS Distribution)" >> README.md
-        echo "![WHOIS Choropleth Map](output/whois_choropleth_map.png)" >> README.md
-        echo "" >> README.md
-        echo "### Canada-specific Request Map" >> README.md
-        echo "![Canada Request Map](output/canada_request_map.png)" >> README.md
-        echo "" >> README.md
-        echo "### Traffic Size to Platforms" >> README.md
-        echo "![Netflix Traffic Size](output/netflix_size.png)" >> README.md
-        echo "![YouTube Traffic Size](output/youtube_size.png)" >> README.md
-        echo "" >> README.md
-        echo "### Response Times to Platforms" >> README.md
-        echo "![Netflix Response Time](output/netflix_duration.png)" >> README.md
-        echo "![YouTube Response Time](output/youtube_duration.png)" >> README.md
+        mkdir -p visualizations
+        echo "# Government of Canada Traffic Analysis Visualizations" > visualizations/README.md
+        echo "This report provides insights into traffic flows between Government of Canada networks and external platforms." >> visualizations/README.md
+        echo "" >> visualizations/README.md
+        echo "![WHOIS Choropleth Map](../output/whois_choropleth_map.png)" >> visualizations/README.md
 
     - name: Commit and Push Results
       env:
@@ -58,7 +66,6 @@ jobs:
       run: |
         git config user.name "GitHub Actions Bot"
         git config user.email "actions@github.com"
-        git add output/
-        git add README.md
-        git commit -m "Update visualizations and README with traffic analysis results" || echo "No changes to commit"
+        git add output/ visualizations/README.md
+        git commit -m "Add traffic analysis visualizations" || echo "No changes to commit"
         git push
