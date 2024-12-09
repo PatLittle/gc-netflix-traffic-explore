@@ -67,6 +67,6 @@ jobs:
         git config user.name "GitHub Actions Bot"
         git config user.email "actions@github.com"
         git add output/ visualizations/README.md
-        git rm output/bgp_routes_AS399188.json        
+        git rm -f output/bgp_routes_AS399188.json        
         git commit -m "Add traffic analysis visualizations" || echo "No changes to commit"
         git push
